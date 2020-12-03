@@ -1,0 +1,14 @@
+GEM
+  specs:
+    minitest (5.14.2)
+    rake (13.0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest (>= 5.0.0)
+  rake (~> 13.0)
+
+BUNDLED WITH
+   2.0.2
