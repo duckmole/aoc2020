@@ -30,4 +30,12 @@ class PuzzleTest < Minitest::Test
     assert_equal 7, day3_1(data)
     assert_equal 230, day3_1(read_file('data/day3.txt'))
   end
+
+  def test_day_3_2
+    data = ['..##.......', '#...#...#..', '.#....#..#.', '..#.#...#.#',
+            '.#...##..#.', '..#.##.....', '.#.#.#....#', '.#........#',
+            '#.##...#...', '#...##....#', '.#..#...#.#']
+    assert_equal 336, day3_2(data)
+    assert_equal 9533698720, day3_2(read_file('data/day3.txt'))
+  end
 end

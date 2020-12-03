@@ -38,9 +38,15 @@ def day2_2(data)
   data.select {|line| pwd_valid2(line)}.count
 end
 
-def day3_1(data)
+def day3_1(data, right: 3, down: 1)
   modulo = data[0].length
   data.each_with_index.select do |line, index|
-    line[3*index%modulo] == '#'
+    line[right * (index / down) % modulo] == '#' && index.remainder(down) == 0 # /
   end.count
+end
+
+def day3_2(data)
+  [[1, 1], [3, 1], [5, 1], [7, 1], [1,2]].inject(1) {|acc, values|
+    acc * day3_1(data, right: values[0], down: values[1])
+  }
 end
