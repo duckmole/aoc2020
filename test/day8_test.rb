@@ -4,7 +4,7 @@ require_relative '../src/day8.rb'
 class Day8Test < Minitest::Test
 
   def test_line
-    assert_equal({cmd: 'nop', data: 0, done: false}, line('nop +0'))
+    assert_equal({cmd: 'nop', data: 0}, line('nop +0'))
   end
 
   def test_1
