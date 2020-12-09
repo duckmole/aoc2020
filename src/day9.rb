@@ -16,7 +16,6 @@ end
 
 def puzzle2(data, step: 5)
   expected, index = puzzle1(data, step: step)
-  puts expected
   data = data[0..index]
   index.times.each do |size|
     (0..index-size).each do |offset|
