@@ -12,4 +12,13 @@ class Day10Test < Minitest::Test
     assert_equal [52, {1=>22, 2=>0, 3=>10}, 220], puzzle1(data)
     assert_equal [175, {1=>73, 2=>0, 3=>34}, 2482], puzzle1(read_file('data/day10.txt'))
   end
+  def test_2
+    data = [16, 10, 15, 5, 1, 11, 7, 19, 6, 12, 4]
+    assert_equal 8, puzzle2(data)
+    data = [28, 33, 18, 42, 31, 14, 46, 20, 48, 47, 24, 23,
+            49, 45, 19, 38, 39, 11, 1, 32, 25, 35, 8,  17, 7,
+            9, 4, 2, 34, 10, 3]
+    assert_equal 19208, puzzle2(data)
+    assert_equal 96717311574016, puzzle2(read_file('data/day10.txt'))
+  end
 end

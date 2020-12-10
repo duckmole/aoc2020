@@ -10,11 +10,14 @@ def puzzle1(data)
   result[data.first] = 1
   (data.size - 1).times do |index|
     key = data[index+1] - data[index]
-    if key > 3
-      return data[index] + 3, result
-    end
     result[key] += 1
   end
   result[3] += 1
   [data.last + 3, result, result[1]*result[3]]
+end
+
+def puzzle2(data)
+  data.sort.each_with_object([1]) do |e, lengthes|
+    lengthes[e] = lengthes[([0, e-3].max)..([0, e-1].max)].compact.sum
+  end.last
 end
