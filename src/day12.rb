@@ -22,8 +22,6 @@ def compute(cmd, value, boat)
             -1
           when 270
             1i
-          else
-            1
           end
         when 'R'
           case value
@@ -33,8 +31,6 @@ def compute(cmd, value, boat)
             -1
           when 270
             -1i
-          else
-            1
           end
         else
           1
@@ -70,8 +66,6 @@ def compute2(cmd, value, boat)
             -1
           when 270
             1i
-          else
-            1
           end
         when 'R'
           case value
@@ -81,8 +75,6 @@ def compute2(cmd, value, boat)
             -1
           when 270
             -1i
-          else
-            1
           end
         else
           1
